@@ -1,0 +1,25 @@
+{
+    "name": "event-centric/identity",
+    "description": "Identity",
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "homepage": "https://github.com/event-centric/identity",
+    "authors": [
+        {
+            "name": "Mathias Verraes",
+            "email": "mathias@verraes.net",
+            "homepage": "http://verraes.net"
+        }
+    ],
+    "keywords": ["domain-driven design", "cqrs", "event sourcing", "ddd", "reactive"],
+
+    "autoload": {
+        "psr-4": {
+            "EventCentric\\": ["src/EventCentric", "tests/EventCentric"]
+        }
+    },
+
+    "config": {
+        "bin-dir": "bin"
+    }
+}

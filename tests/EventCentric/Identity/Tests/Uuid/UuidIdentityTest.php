@@ -1,0 +1,31 @@
+<?php
+
+namespace EventCentric\Identity\Tests\Uuid;
+
+use EventCentric\Identity\GeneratesIdentity;
+use EventCentric\Identity\Identity;
+use EventCentric\Identity\Uuid\UuidIdentity;
+
+final class OrderId implements Identity, GeneratesIdentity
+{
+    use UuidIdentity;
+}
+
+$id1 = OrderId::generate();
+$id2 = OrderId::fromString((string) $id1);
+$id3 = OrderId::generate();
+$id4 = OrderId::fromString('c3bc7f4c-804a-4a7c-8313-51fd1b7baf52');
+$id5 = OrderId::fromString('c3bc7f4c-804a-4a7c-8313-51fd1b7baf52');
+
+assert($id1->equals($id2), "Two generated UuidIdentity objects with the same value should be equal.");
+assert(!$id1->equals($id3), "Two random UuidIdentity objects should not be equal.");
+assert($id4->equals($id5), "Two instantiated UuidIdentity objects with the same value should be equal.");
+
+$thrown = false;
+try {
+    OrderId::fromString('bad-uuid');
+} catch(\InvalidArgumentException $e) {
+    $thrown = true;
+} finally {
+    assert($thrown, "Malformed uuids should throw an exception");
+}
