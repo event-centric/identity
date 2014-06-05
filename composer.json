@@ -13,6 +13,10 @@
     ],
     "keywords": ["domain-driven design", "cqrs", "event sourcing", "ddd", "reactive"],
 
+    "require" : {
+        "php": ">=5.5"
+    },
+
     "autoload": {
         "psr-4": {
             "EventCentric\\Identity\\": ["src/EventCentric/Identity", "tests/EventCentric/Identity"]
