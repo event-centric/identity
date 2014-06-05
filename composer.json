@@ -15,7 +15,7 @@
 
     "autoload": {
         "psr-4": {
-            "EventCentric\\": ["src/EventCentric", "tests/EventCentric"]
+            "EventCentric\\Identity\\": ["src/EventCentric/Identity", "tests/EventCentric/Identity"]
         }
     },
 
