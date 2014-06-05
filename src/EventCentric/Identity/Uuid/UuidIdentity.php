@@ -18,7 +18,7 @@ trait UuidIdentity
 
     /**
      * Generates a UUID v4 Identity
-     * @return Identity
+     * @return static
      */
     public static function generate()
     {
@@ -29,7 +29,7 @@ trait UuidIdentity
     /**
      * Creates an identifier object from a string representation
      * @param $string
-     * @return Identity
+     * @return static
      */
     public static function fromString($string)
     {
@@ -48,7 +48,7 @@ trait UuidIdentity
 
     /**
      * Compares the object to another IdentifiesAggregate object. Returns true if both have the same type and value.
-     * @param $other
+     * @param Identity $other
      * @return boolean
      */
     public function equals(Identity $other)
