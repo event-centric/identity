@@ -48,7 +48,7 @@ trait StringIdentity
 
     private static function guardString($string)
     {
-        if (!is_string($string)) {
+        if (!is_string($string) || empty($string)) {
             throw new InvalidArgumentException("String expected");
         }
     }
