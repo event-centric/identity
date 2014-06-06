@@ -1,10 +1,10 @@
 <?php
 
-namespace EventCentric\Identity\Tests\Uuid;
+namespace EventCentric\Identity\Tests;
 
 use EventCentric\Identity\GeneratesIdentity;
 use EventCentric\Identity\Identity;
-use EventCentric\Identity\Uuid\UuidIdentity;
+use EventCentric\Identity\UuidIdentity;
 
 final class OrderId implements Identity, GeneratesIdentity
 {

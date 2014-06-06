@@ -1,6 +1,6 @@
 <?php
 
-namespace EventCentric\Identity\Uuid;
+namespace EventCentric\Identity;
 
 use EventCentric\Identity\Identity;
 
