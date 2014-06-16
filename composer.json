@@ -1,7 +1,6 @@
 {
     "name": "event-centric/identity",
     "description": "Identity",
-    "minimum-stability": "dev",
     "license": "MIT",
     "homepage": "https://github.com/event-centric/identity",
     "authors": [
@@ -19,12 +18,14 @@
 
     "autoload": {
         "psr-4": {
-            "EventCentric\\Identity\\": ["src/EventCentric/Identity", "tests/EventCentric/Identity"]
+            "EventCentric\\Identity\\": ["src/EventCentric/Identity"]
         }
     },
 
-    "config": {
-        "bin-dir": "bin"
+    "autoload-dev": {
+        "psr-4": {
+            "EventCentric\\Identity\\": ["tests/EventCentric/Identity"]
+        }
     },
 
     "extra": {
