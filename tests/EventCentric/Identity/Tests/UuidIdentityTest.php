@@ -2,13 +2,10 @@
 
 namespace EventCentric\Identity\Tests;
 
-use EventCentric\Identity\GeneratesIdentity;
-use EventCentric\Identity\Identity;
 use EventCentric\Identity\UuidIdentity;
 
-final class OrderId implements Identity, GeneratesIdentity
+final class OrderId extends UuidIdentity
 {
-    use UuidIdentity;
 }
 
 $id1 = OrderId::generate();
