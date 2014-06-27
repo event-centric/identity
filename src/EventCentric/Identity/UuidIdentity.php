@@ -4,7 +4,7 @@ namespace EventCentric\Identity;
 
 use EventCentric\Identity\Identity;
 
-trait UuidIdentity
+abstract class UuidIdentity implements Identity, GeneratesIdentity
 {
     /**
      * @var string

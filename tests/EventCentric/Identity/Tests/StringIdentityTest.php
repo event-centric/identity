@@ -2,12 +2,10 @@
 
 namespace EventCentric\Identity\Tests;
 
-use EventCentric\Identity\Identity;
 use EventCentric\Identity\StringIdentity;
 
-final class ProductId implements Identity
+final class ProductId extends StringIdentity
 {
-    use StringIdentity;
 }
 
 $id1 = ProductId::fromString('my_id');

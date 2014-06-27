@@ -4,7 +4,7 @@ namespace EventCentric\Identity;
 
 use InvalidArgumentException;
 
-trait StringIdentity
+abstract class StringIdentity implements Identity
 {
     /**
      * @var string
