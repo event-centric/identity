@@ -43,7 +43,7 @@ abstract class StringIdentity implements Identity
      */
     public function equals(Identity $other)
     {
-        return $other instanceof static && $this->string == $other->string;
+        return (string) $this->string == (string) $other;
     }
 
     private static function guardString($string)
