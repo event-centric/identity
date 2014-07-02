@@ -18,7 +18,7 @@ abstract class UuidIdentity implements Identity, GeneratesIdentity
 
     /**
      * Generates a UUID v4 Identity
-     * @return Identity
+     * @return static
      */
     public static function generate()
     {
