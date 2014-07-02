@@ -20,7 +20,7 @@ abstract class StringIdentity implements Identity
     /**
      * Creates an identifier object from a string representation
      * @param $string
-     * @return Identity
+     * @return static
      */
     public static function fromString($string)
     {
