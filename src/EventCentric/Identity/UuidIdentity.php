@@ -53,7 +53,7 @@ abstract class UuidIdentity implements Identity, GeneratesIdentity
      */
     public function equals(Identity $other)
     {
-        return $other instanceof static && $this->uuid == $other->uuid;
+        return (string) $this->uuid == (string) $other->uuid;
     }
 
     /**
